@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riyadhoh — SALIK | Pejalan Ruhani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --emerald:#0F6B50; --dark-green:#083D2B; --gold:#D4AF37; --gold-soft:#e8c874;
+    --ivory:#F8F6F1; --ink:#0c2c22; --muted:#5b6b64;
+    --radius:24px; --shadow-card:0 12px 30px -12px rgba(8,61,43,0.15);
+    --max-w:1100px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; color:var(--ink); background:linear-gradient(180deg,#ffffff 0%, #fbfaf6 30%, var(--ivory) 100%);}
+  h1,h2,h3{font-family:'Playfair Display',serif;}
+  a{text-decoration:none; color:inherit;}
+  .container{max-width:var(--max-w); margin:0 auto; padding:0 32px;}
+
+  header{position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.92); backdrop-filter:blur(14px); border-bottom:1px solid #eee6d6; padding:16px 0;}
+  header .container{display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo svg{width:36px; height:36px;}
+  .logo .name{font-family:'Playfair Display',serif; font-weight:700; font-size:18px; color:var(--dark-green);}
+  .back-link{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--emerald); padding:9px 18px; border:1.5px solid var(--emerald); border-radius:999px; transition:all .25s ease;}
+  .back-link:hover{background:var(--emerald); color:#fff;}
+
+  .page-head{padding:56px 0 20px; text-align:center;}
+  .page-head span.arabic{font-family:'Amiri',serif; font-size:28px; color:var(--gold); display:block; margin-bottom:10px;}
+  .page-head h1{font-size:36px; color:var(--dark-green); margin-bottom:12px;}
+  .page-head p{font-size:14px; color:var(--muted); max-width:600px; margin:0 auto; line-height:1.8;}
+
+  .riyadhoh-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin:36px 0 50px;}
+  .riyadhoh-card{background:#fff; border-radius:var(--radius); padding:26px; box-shadow:var(--shadow-card); position:relative; overflow:hidden;}
+  .riyadhoh-card .lvl{position:absolute; top:20px; right:20px; font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:5px 11px; border-radius:999px;}
+  .lvl.pemula{background:#e8f3ec; color:var(--emerald);}
+  .lvl.menengah{background:#faf1d9; color:#a3781a;}
+  .lvl.lanjut{background:#e9ecf5; color:#2c3e70;}
+  .riyadhoh-card i.icon{color:var(--gold); font-size:26px; margin-bottom:16px;}
+  .riyadhoh-card h3{font-size:17px; color:var(--dark-green); margin-bottom:10px;}
+  .riyadhoh-card p{font-size:12.5px; color:var(--muted); line-height:1.7; margin-bottom:14px;}
+  .riyadhoh-card ul{list-style:none; font-size:12px; color:var(--ink);}
+  .riyadhoh-card ul li{padding-left:16px; position:relative; margin-bottom:7px;}
+  .riyadhoh-card ul li::before{content:''; position:absolute; left:0; top:6px; width:5px; height:5px; border-radius:50%; background:var(--emerald);}
+
+  .step-guide{background:#fff; border-radius:var(--radius); padding:30px; box-shadow:var(--shadow-card); margin-bottom:40px;}
+  .step-guide h2{font-size:20px; color:var(--dark-green); margin-bottom:20px;}
+  .step-row{display:flex; gap:18px; padding:16px 0; border-bottom:1px solid #f1ece0;}
+  .step-row:last-child{border-bottom:none;}
+  .step-num{width:34px; height:34px; border-radius:50%; background:var(--dark-green); color:var(--gold-soft); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; flex-shrink:0;}
+  .step-row h4{font-size:14px; color:var(--dark-green); margin-bottom:4px;}
+  .step-row p{font-size:12.5px; color:var(--muted); line-height:1.7;}
+
+  footer{margin-top:20px; background:var(--dark-green); color:#e6ece7; padding:36px 0; text-align:center; font-size:12.5px;}
+  footer a{color:var(--gold-soft); font-weight:600;}
+
+  @media (max-width:900px){ .riyadhoh-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:600px){ .riyadhoh-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#D4AF37" stroke-width="1.4"/>
+        <path d="M24 4 L41 24 L24 44 L7 24 Z" stroke="#D4AF37" stroke-width="1.2" fill="none"/>
+        <circle cx="24" cy="24" r="5" fill="#D4AF37"/>
+      </svg>
+      <span class="name">SALIK — Pejalan Ruhani</span>
+    </div>
+    <a href="salik-landing-page.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <span class="arabic">الرِّيَاضَةُ الرُّوْحِيَّة</span>
+    <h1>Riyadhoh</h1>
+    <p>Latihan ruhani untuk melatih jiwa melawan hawa nafsu — mujahadah yang membentuk kesabaran, kejernihan hati, dan kedekatan kepada Allah.</p>
+  </div>
+
+  <div class="riyadhoh-grid">
+    <div class="riyadhoh-card">
+      <span class="lvl pemula">Pemula</span>
+      <i class="fa-solid fa-moon icon"></i>
+      <h3>Qiyamul Lail</h3>
+      <p>Bangun sepertiga malam terakhir untuk shalat &amp; bermunajat — riyadhoh dasar melatih keikhlasan tanpa dilihat manusia.</p>
+      <ul>
+        <li>Mulai 2 rakaat, tingkatkan bertahap</li>
+        <li>Diakhiri witir &amp; istighfar</li>
+        <li>Waktu terbaik: sepertiga malam akhir</li>
+      </ul>
+    </div>
+    <div class="riyadhoh-card">
+      <span class="lvl pemula">Pemula</span>
+      <i class="fa-solid fa-utensils icon"></i>
+      <h3>Puasa Sunnah</h3>
+      <p>Menahan lapar dan syahwat melatih pengendalian nafsu Ammarah — puasa Senin-Kamis atau Puasa Daud.</p>
+      <ul>
+        <li>Senin &amp; Kamis konsisten</li>
+        <li>Puasa Daud: sehari puasa sehari tidak</li>
+        <li>Jaga lisan &amp; pandangan saat berpuasa</li>
+      </ul>
+    </div>
+    <div class="riyadhoh-card">
+      <span class="lvl menengah">Menengah</span>
+      <i class="fa-solid fa-circle-notch icon"></i>
+      <h3>Khalwat Ringan</h3>
+      <p>Mengasingkan diri sejenak dari keramaian untuk muhasabah dan dzikir mendalam, mengikuti jejak para sufi klasik.</p>
+      <ul>
+        <li>1-3 hari, di tempat sunyi</li>
+        <li>Kurangi bicara &amp; gawai</li>
+        <li>Perbanyak dzikir &amp; membaca Al-Qur'an</li>
+      </ul>
+    </div>
+    <div class="riyadhoh-card">
+      <span class="lvl menengah">Menengah</span>
+      <i class="fa-solid fa-hand-holding-heart icon"></i>
+      <h3>Zuhud Praktis</h3>
+      <p>Melatih hati agar tak terikat dunia — mengurangi konsumsi berlebih, sedekah rutin, hidup sederhana.</p>
+      <ul>
+        <li>Sedekah harian meski kecil</li>
+        <li>Batasi barang yang tak dibutuhkan</li>
+        <li>Evaluasi keterikatan hati pada harta</li>
+      </ul>
+    </div>
+    <div class="riyadhoh-card">
+      <span class="lvl lanjut">Lanjut</span>
+      <i class="fa-solid fa-book-open icon"></i>
+      <h3>Wirid Istiqamah</h3>
+      <p>Menjaga rutinitas dzikir dalam jumlah besar (Ya Lathif, Ya Fattah) sebagai bagian dari Suluk di bawah bimbingan Mursyid.</p>
+      <ul>
+        <li>Dijalani dengan izin/Talqin guru</li>
+        <li>Konsisten harian tanpa putus</li>
+        <li>Disertai Rabithah &amp; Muraqabah</li>
+      </ul>
+    </div>
+    <div class="riyadhoh-card">
+      <span class="lvl lanjut">Lanjut</span>
+      <i class="fa-solid fa-mountain icon"></i>
+      <h3>Khalwat Penuh (Suluk)</h3>
+      <p>Pengasingan diri lebih panjang di bawah bimbingan Mursyid — puncak mujahadah menuju Fana &amp; Baqa.</p>
+      <ul>
+        <li>Hanya dengan bimbingan Mursyid berijazah</li>
+        <li>Durasi bervariasi, sering 40 hari (arba'in)</li>
+        <li>Fokus penuh pada dzikir &amp; ibadah</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step-guide">
+    <h2>Adab Sebelum Memulai Riyadhoh</h2>
+    <div class="step-row">
+      <div class="step-num">1</div>
+      <div><h4>Niat yang Lurus</h4><p>Luruskan niat semata mencari ridha Allah, bukan pujian, karamah, atau pengakuan manusia.</p></div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">2</div>
+      <div><h4>Bertahap &amp; Konsisten</h4><p>Mulai dari amalan ringan yang bisa dijaga terus-menerus, daripada amalan berat yang mudah putus.</p></div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">3</div>
+      <div><h4>Bimbingan Guru</h4><p>Riyadhoh berat seperti khalwat panjang sebaiknya dijalani dengan arahan Mursyid agar tidak tersesat oleh nafsu atau was-was.</p></div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">4</div>
+      <div><h4>Jaga Kesehatan &amp; Kewajiban</h4><p>Riyadhoh tidak boleh mengabaikan hak tubuh, keluarga, dan kewajiban syariat lainnya.</p></div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-bottom:50px;">
+    <a href="04-tahapan-perjalanan.html" style="font-size:13px; font-weight:600; color:var(--emerald);">Pelajari hubungan Riyadhoh dengan Maqamat Salik <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    Riyadhoh — SALIK · <a href="salik-landing-page.html">Kembali ke Beranda</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhasabah Harian — SALIK | Pejalan Ruhani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --emerald:#0F6B50; --dark-green:#083D2B; --gold:#D4AF37; --gold-soft:#e8c874;
+    --ivory:#F8F6F1; --white:#FFFFFF; --ink:#0c2c22; --muted:#5b6b64;
+    --radius:24px; --shadow-card:0 12px 30px -12px rgba(8,61,43,0.15);
+    --max-w:1100px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; color:var(--ink); background:linear-gradient(180deg,#ffffff 0%, #fbfaf6 30%, var(--ivory) 100%); -webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Playfair Display',serif;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:var(--max-w); margin:0 auto; padding:0 32px;}
+
+  header{position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.92); backdrop-filter:blur(14px); border-bottom:1px solid #eee6d6; padding:16px 0;}
+  header .container{display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo svg{width:36px; height:36px;}
+  .logo .name{font-family:'Playfair Display',serif; font-weight:700; font-size:18px; color:var(--dark-green); letter-spacing:1px;}
+  .back-link{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--emerald); padding:9px 18px; border:1.5px solid var(--emerald); border-radius:999px; transition:all .25s ease;}
+  .back-link:hover{background:var(--emerald); color:#fff;}
+
+  .page-head{padding:56px 0 30px; text-align:center;}
+  .page-head span.arabic{font-family:'Amiri',serif; font-size:26px; color:var(--gold); display:block; margin-bottom:10px;}
+  .page-head h1{font-size:36px; color:var(--dark-green); margin-bottom:12px;}
+  .page-head p{font-size:14px; color:var(--muted); max-width:560px; margin:0 auto; line-height:1.8;}
+
+  .summary-row{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:36px;}
+  .summary-card{background:#fff; border-radius:18px; padding:26px; box-shadow:var(--shadow-card); text-align:center;}
+  .summary-card .ring{position:relative; width:88px; height:88px; margin:0 auto 14px;}
+  .summary-card .ring svg{transform:rotate(-90deg);}
+  .summary-card .ring .pct{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:19px; color:var(--dark-green);}
+  .summary-card h4{font-size:13.5px; color:var(--muted); font-weight:500;}
+
+  .grid-2{display:grid; grid-template-columns:1.3fr 1fr; gap:28px; align-items:start;}
+  .card{background:#fff; border-radius:var(--radius); padding:28px; box-shadow:var(--shadow-card); margin-bottom:24px;}
+  .card h2{font-size:19px; color:var(--dark-green); margin-bottom:18px; display:flex; align-items:center; gap:10px;}
+  .card h2 i{color:var(--gold); font-size:17px;}
+
+  .week-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:8px; margin-bottom:20px;}
+  .week-day{text-align:center;}
+  .week-day .lbl{font-size:10.5px; color:var(--muted); margin-bottom:8px;}
+  .week-day .dot{width:34px; height:34px; border-radius:50%; margin:0 auto; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:600; color:#fff; background:#e2ddcd;}
+  .week-day .dot.done{background:var(--emerald);}
+  .week-day .dot.partial{background:var(--gold);}
+  .week-day.today .dot{border:2px solid var(--dark-green);}
+
+  .checklist-cat{margin-bottom:22px;}
+  .checklist-cat h4{font-size:12.5px; text-transform:uppercase; letter-spacing:1px; color:var(--gold); font-weight:700; margin-bottom:12px;}
+  .check-row{display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid #f1ece0; font-size:13.5px;}
+  .check-row:last-child{border-bottom:none;}
+  .check-row .box{width:20px; height:20px; border-radius:6px; border:1.5px solid #cfe0d6; display:flex; align-items:center; justify-content:center; font-size:11px; color:#fff; flex-shrink:0;}
+  .check-row.done .box{background:var(--emerald); border-color:var(--emerald);}
+  .check-row .streak{font-size:11px; color:var(--muted); background:var(--ivory); padding:3px 9px; border-radius:999px;}
+
+  .quote-box{background:linear-gradient(135deg,#0d3f2e,#0F6B50); color:#fff; border-radius:18px; padding:24px; font-family:'Playfair Display',serif; font-style:italic; font-size:15px; line-height:1.7; margin-bottom:24px;}
+  .quote-box span{display:block; margin-top:10px; font-family:'Poppins',sans-serif; font-style:normal; font-size:11.5px; color:var(--gold-soft);}
+
+  #jurnal{scroll-margin-top:90px;}
+  .jurnal-entry{border:1px solid #eee6d6; border-radius:16px; padding:20px; margin-bottom:16px;}
+  .jurnal-entry .day{font-size:11px; font-weight:700; color:var(--emerald); background:var(--ivory); display:inline-block; padding:4px 12px; border-radius:999px; margin-bottom:10px;}
+  .jurnal-entry textarea{width:100%; border:none; resize:vertical; font-family:'Poppins',sans-serif; font-size:13px; color:var(--ink); line-height:1.8; min-height:80px; background:transparent;}
+  .jurnal-entry textarea:focus{outline:none;}
+  .btn-primary{background:var(--emerald); color:#fff; border:none; padding:12px 22px; border-radius:12px; font-size:13px; font-weight:600; cursor:pointer;}
+
+  footer{margin-top:50px; background:var(--dark-green); color:#e6ece7; padding:36px 0; text-align:center; font-size:12.5px;}
+  footer a{color:var(--gold-soft); font-weight:600;}
+
+  @media (max-width:860px){
+    .grid-2{grid-template-columns:1fr;}
+    .summary-row{grid-template-columns:1fr;}
+    .week-grid{grid-template-columns:repeat(4,1fr); row-gap:16px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#D4AF37" stroke-width="1.4"/>
+        <path d="M24 4 L41 24 L24 44 L7 24 Z" stroke="#D4AF37" stroke-width="1.2" fill="none"/>
+        <circle cx="24" cy="24" r="5" fill="#D4AF37"/>
+      </svg>
+      <span class="name">SALIK — Pejalan Ruhani</span>
+    </div>
+    <a href="salik-landing-page.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <span class="arabic">مُحَاسَبَةُ النَّفْسِ</span>
+    <h1>Muhasabah Harian</h1>
+    <p>"Hisablah dirimu sebelum engkau dihisab." Catatan harian ini membantumu menimbang amal, menjaga istiqamah, dan mengenali pola dirimu dari hari ke hari.</p>
+  </div>
+
+  <div class="summary-row">
+    <div class="summary-card">
+      <div class="ring">
+        <svg width="88" height="88"><circle cx="44" cy="44" r="36" stroke="#eef1ec" stroke-width="8" fill="none"/><circle cx="44" cy="44" r="36" stroke="#0F6B50" stroke-width="8" fill="none" stroke-dasharray="226" stroke-dashoffset="34" stroke-linecap="round"/></svg>
+        <div class="pct">85%</div>
+      </div>
+      <h4>Progress Hari Ini</h4>
+    </div>
+    <div class="summary-card">
+      <div class="ring">
+        <svg width="88" height="88"><circle cx="44" cy="44" r="36" stroke="#eef1ec" stroke-width="8" fill="none"/><circle cx="44" cy="44" r="36" stroke="#D4AF37" stroke-width="8" fill="none" stroke-dasharray="226" stroke-dashoffset="79" stroke-linecap="round"/></svg>
+        <div class="pct">65%</div>
+      </div>
+      <h4>Rata-rata Pekan Ini</h4>
+    </div>
+    <div class="summary-card">
+      <div class="ring">
+        <svg width="88" height="88"><circle cx="44" cy="44" r="36" stroke="#eef1ec" stroke-width="8" fill="none"/><circle cx="44" cy="44" r="36" stroke="#083D2B" stroke-width="8" fill="none" stroke-dasharray="226" stroke-dashoffset="170" stroke-linecap="round"/></svg>
+        <div class="pct">12</div>
+      </div>
+      <h4>Hari Beruntun Istiqamah</h4>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="col-main">
+
+      <div class="card">
+        <h2><i class="fa-solid fa-calendar-week"></i> Rekap Pekan Ini</h2>
+        <div class="week-grid">
+          <div class="week-day"><div class="lbl">Sen</div><div class="dot done">9/9</div></div>
+          <div class="week-day"><div class="lbl">Sel</div><div class="dot done">9/9</div></div>
+          <div class="week-day"><div class="lbl">Rab</div><div class="dot partial">6/9</div></div>
+          <div class="week-day"><div class="lbl">Kam</div><div class="dot done">8/9</div></div>
+          <div class="week-day"><div class="lbl">Jum</div><div class="dot partial">5/9</div></div>
+          <div class="week-day"><div class="lbl">Sab</div><div class="dot done">9/9</div></div>
+          <div class="week-day today"><div class="lbl">Ahad</div><div class="dot done">8/9</div></div>
+        </div>
+        <p style="font-size:12px; color:var(--muted);">Hijau: 8-9 amalan tercapai · Kuning: 5-7 amalan tercapai</p>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-list-check"></i> Checklist Hari Ini</h2>
+
+        <div class="checklist-cat">
+          <h4>Ibadah Wajib &amp; Sunnah</h4>
+          <div class="check-row done"><span style="display:flex;align-items:center;gap:10px;"><span class="box"><i class="fa-solid fa-check"></i></span>Shalat Tepat Waktu</span><span class="streak">12 hari</span></div>
+          <div class="check-row done"><span style="display:flex;align-items:center;gap:10px;"><span class="box"><i class="fa-solid fa-check"></i></span>Tahajud</span><span class="streak">5 hari</span></div>
+          <div class="check-row done"><span style="display:flex;align-items:center;gap:10px;"><span class="box"><i class="fa-solid fa-check"></i></span>Dhuha</span><span class="streak">9 hari</span></div>
+          <div class="check-row"><span style="display:flex;align-items:center;gap:10px;"><span class="box"></span>Tilawah 1 Juz</span><span class="streak">terputus</span></div>
+        </div>
+
+        <div class="checklist-cat">
+          <h4>Riyadhoh &amp; Dzikir</h4>
+          <div class="check-row done"><span style="display:flex;align-items:center;gap:10px;"><span class="box"><i class="fa-solid fa-check"></i></span>Dzikir Pagi &amp; Petang</span><span class="streak">12 hari</span></div>
+          <div class="check-row done"><span style="display:flex;align-items:center;gap:10px;"><span class="box"><i class="fa-solid fa-check"></i></span>Muhasabah Sebelum Tidur</span><span class="streak">12 hari</span></div>
+        </div>
+
+        <div class="checklist-cat">
+          <h4>Akhlak &amp; Adab</h4>
+          <div class="check-row done"><span style="display:flex;align-items:center;gap:10px;"><span class="box"><i class="fa-solid fa-check"></i></span>Sedekah</span><span class="streak">4 hari</span></div>
+          <div class="check-row done"><span style="display:flex;align-items:center;gap:10px;"><span class="box"><i class="fa-solid fa-check"></i></span>Menahan Marah</span><span class="streak">7 hari</span></div>
+          <div class="check-row"><span style="display:flex;align-items:center;gap:10px;"><span class="box"></span>Menjaga Lisan</span><span class="streak">terputus</span></div>
+        </div>
+      </div>
+
+      <div class="card" id="jurnal">
+        <h2><i class="fa-solid fa-feather"></i> Jurnal Salik — Hari ke-12</h2>
+        <div class="jurnal-entry">
+          <div class="day">Hari ini saya belajar...</div>
+          <textarea placeholder="Tuliskan hikmah atau ilmu yang kamu dapat hari ini...">Hari ini saya belajar tentang maqam Sabar — bahwa sabar bukan berarti diam menahan, tapi tenang menerima ketentuan Allah tanpa kehilangan ikhtiar.</textarea>
+        </div>
+        <div class="jurnal-entry">
+          <div class="day">Hari ini saya berdzikir...</div>
+          <textarea placeholder="Ceritakan dzikir dan ibadahmu hari ini...">Dzikir pagi 1000x Laa ilaha illallah, terasa lebih khusyuk karena mengingat makna "tiada tujuan selain Allah".</textarea>
+        </div>
+        <div class="jurnal-entry">
+          <div class="day">Perasaan hati...</div>
+          <textarea placeholder="Bagaimana keadaan hatimu hari ini?">Ada rasa syukur yang dalam, meski masih sering lalai. Semoga Allah mudahkan istiqamah esok hari.</textarea>
+        </div>
+        <button class="btn-primary"><i class="fa-solid fa-floppy-disk" style="margin-right:8px;"></i>Simpan Jurnal</button>
+      </div>
+    </div>
+
+    <div class="col-side">
+      <div class="quote-box">
+        "Barangsiapa yang hari ini lebih baik dari hari kemarin, maka ia beruntung. Barangsiapa yang sama saja, maka ia merugi."
+        <span>— Hadits Riwayat, dikutip dalam tradisi muhasabah salaf</span>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-mountain"></i> Terhubung dengan Maqam</h2>
+        <p style="font-size:12.5px; color:var(--muted); line-height:1.8; margin-bottom:14px;">Muhasabah adalah cerminan maqam Sabar &amp; Syukur dalam perjalanan Tahapan Salik.</p>
+        <a href="04-tahapan-perjalanan.html" style="display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600; color:var(--emerald);">Pelajari Maqamat <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa-solid fa-circle-notch"></i> Dzikir Terkait</h2>
+        <p style="font-size:12.5px; color:var(--muted); line-height:1.8; margin-bottom:14px;">Perkuat muhasabahmu dengan dzikir istighfar &amp; sayyidul istighfar.</p>
+        <a href="dzikir-wirid.html" style="display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600; color:var(--emerald);">Buka Dzikir &amp; Wirid <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    Muhasabah Harian — SALIK · <a href="salik-landing-page.html">Kembali ke Beranda</a>
+  </div>
+</footer>
+
+</body>
+</html>

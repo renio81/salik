@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download — SALIK | Pejalan Ruhani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --emerald:#0F6B50; --dark-green:#083D2B; --gold:#D4AF37; --gold-soft:#e8c874;
+    --ivory:#F8F6F1; --ink:#0c2c22; --muted:#5b6b64;
+    --radius:24px; --shadow-card:0 12px 30px -12px rgba(8,61,43,0.15);
+    --max-w:1100px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; color:var(--ink); background:linear-gradient(180deg,#ffffff 0%, #fbfaf6 30%, var(--ivory) 100%);}
+  h1,h2,h3{font-family:'Playfair Display',serif;}
+  a{text-decoration:none; color:inherit;}
+  .container{max-width:var(--max-w); margin:0 auto; padding:0 32px;}
+
+  header{position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.92); backdrop-filter:blur(14px); border-bottom:1px solid #eee6d6; padding:16px 0;}
+  header .container{display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo svg{width:36px; height:36px;}
+  .logo .name{font-family:'Playfair Display',serif; font-weight:700; font-size:18px; color:var(--dark-green);}
+  .back-link{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--emerald); padding:9px 18px; border:1.5px solid var(--emerald); border-radius:999px; transition:all .25s ease;}
+  .back-link:hover{background:var(--emerald); color:#fff;}
+
+  .page-head{padding:56px 0 20px; text-align:center;}
+  .page-head span.arabic{font-family:'Amiri',serif; font-size:28px; color:var(--gold); display:block; margin-bottom:10px;}
+  .page-head h1{font-size:36px; color:var(--dark-green); margin-bottom:12px;}
+  .page-head p{font-size:14px; color:var(--muted); max-width:600px; margin:0 auto; line-height:1.8;}
+
+  .dl-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin:36px 0 50px;}
+  .dl-card{background:#fff; border-radius:var(--radius); padding:26px; box-shadow:var(--shadow-card); display:flex; gap:18px; align-items:flex-start; position:relative; overflow:hidden;}
+  .dl-card .filetype{width:54px; height:54px; border-radius:14px; background:var(--ivory); color:var(--emerald); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0;}
+  .dl-card.ready .filetype{background:var(--dark-green); color:var(--gold-soft);}
+  .dl-body{flex:1;}
+  .dl-body h3{font-size:16px; color:var(--dark-green); margin-bottom:6px;}
+  .dl-body p{font-size:12.5px; color:var(--muted); line-height:1.7; margin-bottom:14px;}
+  .dl-meta{font-size:11px; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px; display:block;}
+  .dl-btn{display:inline-flex; align-items:center; gap:8px; background:var(--emerald); color:#fff; padding:10px 18px; border-radius:12px; font-size:12.5px; font-weight:600; transition:transform .25s ease;}
+  .dl-btn:hover{transform:translateY(-2px);}
+  .dl-btn.disabled{background:var(--ivory); color:var(--muted); cursor:not-allowed;}
+  .badge-soon{position:absolute; top:20px; right:20px; font-size:9.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase; background:var(--ivory); color:var(--muted); padding:5px 10px; border-radius:999px;}
+
+  .note-box{background:var(--dark-green); color:#e6ece7; border-radius:18px; padding:24px 28px; margin-bottom:50px; font-size:13px; line-height:1.8;}
+  .note-box strong{color:var(--gold-soft);}
+
+  footer{margin-top:20px; background:var(--dark-green); color:#e6ece7; padding:36px 0; text-align:center; font-size:12.5px;}
+  footer a{color:var(--gold-soft); font-weight:600;}
+
+  @media (max-width:760px){ .dl-grid{grid-template-columns:1fr;} .dl-card{flex-direction:column;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#D4AF37" stroke-width="1.4"/>
+        <path d="M24 4 L41 24 L24 44 L7 24 Z" stroke="#D4AF37" stroke-width="1.2" fill="none"/>
+        <circle cx="24" cy="24" r="5" fill="#D4AF37"/>
+      </svg>
+      <span class="name">SALIK — Pejalan Ruhani</span>
+    </div>
+    <a href="salik-landing-page.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <span class="arabic">تَنْزِيْلٌ مُبَارَكٌ</span>
+    <h1>Download &amp; Materi</h1>
+    <p>Unduh ringkasan, naskah, dan materi cetak untuk menemani perjalanan ruhanimu — bisa dibaca offline maupun dibagikan pada majelis taklim.</p>
+  </div>
+
+  <div class="dl-grid">
+    <div class="dl-card ready">
+      <div class="filetype"><i class="fa-solid fa-file-pdf"></i></div>
+      <div class="dl-body">
+        <span class="dl-meta">PDF &middot; 3 Halaman</span>
+        <h3>Ringkasan Tahapan Salik</h3>
+        <p>Peta ringkas empat lapis cahaya, tabel tingkatan salik, maqamat utama, rintangan, dan doa penutup perjalanan — cocok dicetak sebagai lembar panduan.</p>
+        <a class="dl-btn" href="ringkasan-tahapan-salik.pdf" download><i class="fa-solid fa-download"></i> Unduh PDF</a>
+      </div>
+    </div>
+
+    <div class="dl-card ready">
+      <div class="filetype"><i class="fa-solid fa-file-word"></i></div>
+      <div class="dl-body">
+        <span class="dl-meta">DOCX &middot; Naskah Lengkap</span>
+        <h3>Naskah Asli: SALIK — Pejalan Ruhani</h3>
+        <p>Dokumen lengkap sumber materi seluruh bab: Muqoddimah, Syarat &amp; Kesiapan, Adab, Maqamat, Tingkatan, Rintangan, hingga Wushul Ilallah.</p>
+        <a class="dl-btn" href="https://docs.google.com/document/d/1C0wgtLlTjzryVyK8FkCku_JG_6pIHxTQ/edit?usp=sharing&ouid=114464894868040436049&rtpof=true&sd=true" download><i class="fa-solid fa-download"></i> Unduh DOCX</a>
+      </div>
+    </div>
+
+    <div class="dl-card">
+      <span class="badge-soon">Segera Hadir</span>
+      <div class="filetype"><i class="fa-solid fa-image"></i></div>
+      <div class="dl-body">
+        <span class="dl-meta">Poster &middot; JPG Cetak</span>
+        <h3>Poster 12 Maqamat Perjalanan Salik</h3>
+        <p>Ilustrasi perjalanan Islam → Iman → Ihsan hingga Makrifat dalam satu lembar poster bergaya kaligrafi emas, cocok ditempel di ruang dzikir.</p>
+        <span class="dl-btn disabled"><i class="fa-solid fa-clock"></i> Belum Tersedia</span>
+      </div>
+    </div>
+
+    <div class="dl-card">
+      <span class="badge-soon">Segera Hadir</span>
+      <div class="filetype"><i class="fa-solid fa-table-list"></i></div>
+      <div class="dl-body">
+        <span class="dl-meta">PDF &middot; Lembar Cetak</span>
+        <h3>Kartu Muhasabah Harian (Cetak)</h3>
+        <p>Versi cetak dari checklist Muhasabah Harian di beranda — untuk diisi manual dengan pena, direkap mingguan bersama keluarga atau jamaah.</p>
+        <span class="dl-btn disabled"><i class="fa-solid fa-clock"></i> Belum Tersedia</span>
+      </div>
+    </div>
+
+    <div class="dl-card">
+      <span class="badge-soon">Segera Hadir</span>
+      <div class="filetype"><i class="fa-solid fa-headphones"></i></div>
+      <div class="dl-body">
+        <span class="dl-meta">Audio &middot; MP3</span>
+        <h3>Kumpulan Dzikir &amp; Wirid (Audio)</h3>
+        <p>Rekaman bacaan dzikir pagi &amp; petang, Ratib Al-Haddad, dan Hizb An-Nashr untuk didengarkan saat perjalanan atau sebelum tidur.</p>
+        <span class="dl-btn disabled"><i class="fa-solid fa-clock"></i> Belum Tersedia</span>
+      </div>
+    </div>
+
+    <div class="dl-card">
+      <span class="badge-soon">Segera Hadir</span>
+      <div class="filetype"><i class="fa-solid fa-images"></i></div>
+      <div class="dl-body">
+        <span class="dl-meta">Galeri &middot; Dokumentasi</span>
+        <h3>Galeri Foto Majelis &amp; Ziarah</h3>
+        <p>Dokumentasi kegiatan kajian tasawuf, khalwat bersama, dan ziarah ke makam para wali — dapat diunduh untuk kenang-kenangan.</p>
+        <span class="dl-btn disabled"><i class="fa-solid fa-clock"></i> Belum Tersedia</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Catatan:</strong> Materi lengkap dengan penjelasan empat lapis perspektif (Syariat, Tarekat, Hakikat, Makrifat) untuk setiap bab tetap dapat dibaca kapan saja secara online di halaman
+    <a href="00-pendahuluan.html" style="color:var(--gold-soft); text-decoration:underline;">Tahapan Seorang Salik</a>.
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    Download &amp; Materi — SALIK · <a href="salik-landing-page.html">Kembali ke Beranda</a>
+  </div>
+</footer>
+
+</body>
+</html>

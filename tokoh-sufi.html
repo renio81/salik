@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tokoh Sufi — SALIK | Pejalan Ruhani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --emerald:#0F6B50; --dark-green:#083D2B; --gold:#D4AF37; --gold-soft:#e8c874;
+    --ivory:#F8F6F1; --ink:#0c2c22; --muted:#5b6b64;
+    --radius:24px; --shadow-card:0 12px 30px -12px rgba(8,61,43,0.15);
+    --max-w:1100px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; color:var(--ink); background:linear-gradient(180deg,#ffffff 0%, #fbfaf6 30%, var(--ivory) 100%);}
+  h1,h2,h3{font-family:'Playfair Display',serif;}
+  a{text-decoration:none; color:inherit;}
+  .container{max-width:var(--max-w); margin:0 auto; padding:0 32px;}
+
+  header{position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.92); backdrop-filter:blur(14px); border-bottom:1px solid #eee6d6; padding:16px 0;}
+  header .container{display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo svg{width:36px; height:36px;}
+  .logo .name{font-family:'Playfair Display',serif; font-weight:700; font-size:18px; color:var(--dark-green);}
+  .back-link{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--emerald); padding:9px 18px; border:1.5px solid var(--emerald); border-radius:999px; transition:all .25s ease;}
+  .back-link:hover{background:var(--emerald); color:#fff;}
+
+  .page-head{padding:56px 0 20px; text-align:center;}
+  .page-head span.arabic{font-family:'Amiri',serif; font-size:28px; color:var(--gold); display:block; margin-bottom:10px;}
+  .page-head h1{font-size:36px; color:var(--dark-green); margin-bottom:12px;}
+  .page-head p{font-size:14px; color:var(--muted); max-width:600px; margin:0 auto; line-height:1.8;}
+
+  .tokoh-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin:36px 0 50px;}
+  .tokoh-card{background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-card); transition:transform .3s ease;}
+  .tokoh-card:hover{transform:translateY(-4px);}
+  .tokoh-banner{height:110px; display:flex; align-items:center; justify-content:center; position:relative;}
+  .tokoh-banner .arabic{font-family:'Amiri',serif; font-size:26px; color:var(--gold-soft);}
+  .tokoh-banner::before{content:''; position:absolute; inset:0; opacity:0.08; background-image:radial-gradient(circle at 20% 30%, #fff 0, transparent 2px), radial-gradient(circle at 80% 70%, #fff 0, transparent 2px); background-size:30px 30px;}
+  .banner-1{background:linear-gradient(135deg,#0d3f2e,#0F6B50);}
+  .banner-2{background:linear-gradient(135deg,#4a2f0e,#7a531c);}
+  .banner-3{background:linear-gradient(135deg,#0a1830,#12213f);}
+  .banner-4{background:linear-gradient(135deg,#123f30,#0e5c40);}
+  .banner-5{background:linear-gradient(135deg,#6b4a12,#8a6a1e);}
+  .banner-6{background:linear-gradient(135deg,#083D2B,#0a2e21);}
+  .tokoh-body{padding:22px;}
+  .tokoh-body h3{font-size:17px; color:var(--dark-green); margin-bottom:4px;}
+  .tokoh-body .era{font-size:11px; color:var(--gold); font-weight:700; margin-bottom:10px; letter-spacing:0.5px;}
+  .tokoh-body p{font-size:12.5px; color:var(--muted); line-height:1.7; margin-bottom:12px;}
+  .tokoh-body .tag{display:inline-block; background:var(--ivory); color:var(--emerald); font-size:10.5px; font-weight:600; padding:4px 10px; border-radius:999px; margin-right:6px;}
+
+  footer{margin-top:20px; background:var(--dark-green); color:#e6ece7; padding:36px 0; text-align:center; font-size:12.5px;}
+  footer a{color:var(--gold-soft); font-weight:600;}
+
+  @media (max-width:900px){ .tokoh-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:600px){ .tokoh-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#D4AF37" stroke-width="1.4"/>
+        <path d="M24 4 L41 24 L24 44 L7 24 Z" stroke="#D4AF37" stroke-width="1.2" fill="none"/>
+        <circle cx="24" cy="24" r="5" fill="#D4AF37"/>
+      </svg>
+      <span class="name">SALIK — Pejalan Ruhani</span>
+    </div>
+    <a href="salik-landing-page.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <span class="arabic">أَعْلَامُ الصُّوْفِيَّة</span>
+    <h1>Tokoh Sufi</h1>
+    <p>Mengenal jejak para arifin dan wali yang telah menempuh jalan Salik, meninggalkan warisan hikmah bagi generasi setelahnya.</p>
+  </div>
+
+  <div class="tokoh-grid">
+    <div class="tokoh-card">
+      <div class="tokoh-banner banner-1"><span class="arabic">الجيلاني</span></div>
+      <div class="tokoh-body">
+        <h3>Syekh Abdul Qadir al-Jilani</h3>
+        <div class="era">470–561 H · Baghdad</div>
+        <p>Dijuluki Sultanul Auliya, pendiri Tarekat Qadiriyah. Karyanya Al-Fathur Rabbani &amp; Futuhul Ghaib menjadi rujukan utama adab dan maqamat.</p>
+        <span class="tag">Tarekat Qadiriyah</span><span class="tag">Wali Quthub</span>
+      </div>
+    </div>
+    <div class="tokoh-card">
+      <div class="tokoh-banner banner-2"><span class="arabic">الغزالي</span></div>
+      <div class="tokoh-body">
+        <h3>Imam Al-Ghazali</h3>
+        <div class="era">450–505 H · Persia</div>
+        <p>Hujjatul Islam, penulis Ihya Ulumuddin &amp; Bidayatul Hidayah — menjembatani ilmu syariat dengan hakikat tasawuf secara sistematis.</p>
+        <span class="tag">Ihya Ulumuddin</span><span class="tag">Hujjatul Islam</span>
+      </div>
+    </div>
+    <div class="tokoh-card">
+      <div class="tokoh-banner banner-3"><span class="arabic">ابن عطاء الله</span></div>
+      <div class="tokoh-body">
+        <h3>Ibnu Atha'illah as-Sakandari</h3>
+        <div class="era">wafat 709 H · Mesir</div>
+        <p>Penulis Al-Hikam, kumpulan aforisme sufi yang mendalam tentang tauhid, tawakkal, dan kefanaan diri di hadapan Allah.</p>
+        <span class="tag">Al-Hikam</span><span class="tag">Tarekat Syadziliyah</span>
+      </div>
+    </div>
+    <div class="tokoh-card">
+      <div class="tokoh-banner banner-4"><span class="arabic">الشاذلي</span></div>
+      <div class="tokoh-body">
+        <h3>Abul Hasan Asy-Syadzili</h3>
+        <div class="era">593–656 H · Maroko/Mesir</div>
+        <p>Pendiri Tarekat Syadziliyah, dikenal dengan Hizb An-Nashr yang diwiridkan luas hingga ke Nusantara.</p>
+        <span class="tag">Tarekat Syadziliyah</span><span class="tag">Hizb An-Nashr</span>
+      </div>
+    </div>
+    <div class="tokoh-card">
+      <div class="tokoh-banner banner-5"><span class="arabic">حمزة فنسوري</span></div>
+      <div class="tokoh-body">
+        <h3>Hamzah Fansuri</h3>
+        <div class="era">abad ke-16 · Aceh, Nusantara</div>
+        <p>Pujangga sufi Melayu perintis, menulis syair-syair tasawuf wujudiyah yang menyatukan sastra &amp; ajaran hakikat.</p>
+        <span class="tag">Sastra Sufi Melayu</span><span class="tag">Wujudiyah</span>
+      </div>
+    </div>
+    <div class="tokoh-card">
+      <div class="tokoh-banner banner-6"><span class="arabic">حسن اشعري</span></div>
+      <div class="tokoh-body">
+        <h3>Hadratussyaikh Hasyim Asy'ari</h3>
+        <div class="era">1871–1947 M · Jawa, Nusantara</div>
+        <p>Ulama Nusantara, penulis Adabul 'Alim wal Muta'allim — penekanan besar pada adab murid terhadap guru dalam menuntut ilmu &amp; ruhani.</p>
+        <span class="tag">Adabul 'Alim</span><span class="tag">Nusantara</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-bottom:50px;">
+    <a href="01-salik-penempuh-jalan-ruhani.html" style="font-size:13px; font-weight:600; color:var(--emerald);">Baca kutipan &amp; ajaran mereka di Tahapan Salik <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    Tokoh Sufi — SALIK · <a href="salik-landing-page.html">Kembali ke Beranda</a>
+  </div>
+</footer>
+
+</body>
+</html>

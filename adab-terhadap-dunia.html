@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adab terhadap Dunia — SALIK | Pejalan Ruhani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --emerald:#0F6B50; --dark-green:#083D2B; --gold:#D4AF37; --gold-soft:#e8c874;
+    --ivory:#F8F6F1; --ink:#0c2c22; --muted:#5b6b64;
+    --radius:24px; --shadow-card:0 12px 30px -12px rgba(8,61,43,0.15);
+    --max-w:1100px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; color:var(--ink); background:linear-gradient(180deg,#ffffff 0%, #fbfaf6 30%, var(--ivory) 100%);}
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  .container{max-width:var(--max-w); margin:0 auto; padding:0 32px;}
+
+  header{position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.92); backdrop-filter:blur(14px); border-bottom:1px solid #eee6d6; padding:16px 0;}
+  header .container{display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo svg{width:36px; height:36px;}
+  .logo .name{font-family:'Playfair Display',serif; font-weight:700; font-size:18px; color:var(--dark-green);}
+  .back-link{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--emerald); padding:9px 18px; border:1.5px solid var(--emerald); border-radius:999px; transition:all .25s ease;}
+  .back-link:hover{background:var(--emerald); color:#fff;}
+
+  .page-head{padding:50px 0 10px; text-align:center;}
+  .page-head span.arabic{font-family:'Amiri',serif; font-size:26px; color:var(--gold); display:block; margin-bottom:10px;}
+  .page-head h1{font-size:32px; color:var(--dark-green); margin-bottom:12px; display:flex; align-items:center; justify-content:center; gap:12px;}
+  .page-head h1 i{color:var(--emerald); font-size:26px;}
+  .page-head p{font-size:13.5px; color:var(--muted); max-width:640px; margin:0 auto; line-height:1.85;}
+
+  footer{margin-top:20px; background:var(--dark-green); color:#e6ece7; padding:36px 0; text-align:center; font-size:12.5px;}
+  footer a{color:var(--gold-soft); font-weight:600;}
+
+  .adab-nav{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 30px;}
+  .adab-nav a{font-size:12px; font-weight:500; padding:8px 14px; border-radius:999px; background:var(--ivory); color:var(--dark-green); transition:all .25s ease;}
+  .adab-nav a.active{background:var(--emerald); color:#fff;}
+  .adab-nav a:hover{background:var(--emerald); color:#fff;}
+
+  .principle-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:28px;}
+  .principle-card{background:#fff; border-radius:16px; padding:20px 22px; box-shadow:var(--shadow-card); border-left:3px solid var(--emerald);}
+  .principle-card h4{font-size:14.5px; color:var(--dark-green); margin-bottom:8px;}
+  .principle-card p{font-size:12.5px; color:var(--muted); line-height:1.7;}
+
+  .quote-block{background:var(--ivory); border-left:3px solid var(--gold); border-radius:0 14px 14px 0; padding:18px 22px; margin:8px 0 28px; font-size:13px; color:var(--ink); line-height:1.8; font-style:italic;}
+
+  .amalan-box{background:linear-gradient(135deg,#0d3f2e,#0F6B50); color:#fff; border-radius:18px; padding:26px 28px; margin-bottom:24px;}
+  .amalan-box h4{font-size:15px; color:var(--gold-soft); margin-bottom:12px; display:flex; align-items:center; gap:8px;}
+  .amalan-box ul li{font-size:12.5px; color:#e7f1ec; line-height:1.8; margin-bottom:10px; padding-left:16px; position:relative;}
+  .amalan-box ul li::before{content:''; position:absolute; left:0; top:7px; width:5px; height:5px; border-radius:50%; background:var(--gold-soft);}
+
+  .nasihat-box{background:#fff; border:1.5px dashed var(--gold); border-radius:18px; padding:22px 26px; margin-bottom:10px; font-size:13px; color:var(--ink); line-height:1.85;}
+  .nasihat-box .label{display:flex; align-items:center; gap:8px; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:10px;}
+
+  .chapter-pager{display:flex; justify-content:space-between; gap:16px; padding:36px 0 10px;}
+  .pager-btn{display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #eee6d6; border-radius:16px; padding:14px 20px; font-size:13.5px; font-weight:600; color:var(--dark-green); box-shadow:var(--shadow-card); transition:transform .25s ease; max-width:46%;}
+  .pager-btn:hover{transform:translateY(-3px);}
+  .pager-btn.next{margin-left:auto; text-align:right; flex-direction:row-reverse;}
+  .pager-btn small{display:block; font-weight:400; color:var(--muted); font-size:11px; margin-bottom:2px;}
+  @media (max-width:700px){
+    .principle-grid{grid-template-columns:1fr;}
+    .chapter-pager{flex-direction:column;}
+    .pager-btn, .pager-btn.next{max-width:100%; text-align:left; flex-direction:row; margin-left:0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#D4AF37" stroke-width="1.4"/>
+        <path d="M24 4 L41 24 L24 44 L7 24 Z" stroke="#D4AF37" stroke-width="1.2" fill="none"/>
+        <path d="M24 10 L36 24 L24 38 L12 24 Z" stroke="#D4AF37" stroke-width="1.2" fill="none"/>
+        <circle cx="24" cy="24" r="5" fill="#D4AF37"/>
+      </svg>
+      <span class="name">SALIK — Pejalan Ruhani</span>
+    </div>
+    <a href="salik-landing-page.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <span class="arabic">أَدَبُ الزُّهْدِ فِي الدُّنْيَا</span>
+    <h1><i class="fa-solid fa-globe"></i> Adab terhadap Dunia</h1>
+    <p>Zuhud bukan berarti membenci dunia atau meninggalkan usaha, melainkan menempatkan dunia di tangan — bukan di hati.</p>
+  </div>
+
+  <div class="adab-nav">
+    <a href="adab-kepada-allah.html">Adab kepada Allah</a>
+    <a href="adab-kepada-rasul.html">Adab kepada Rasulullah ﷺ</a>
+    <a href="adab-terhadap-dunia.html" class="active">Adab terhadap Dunia</a>
+    <a href="adab-terhadap-diri.html">Adab terhadap Diri</a>
+    <a href="adab-sesama-salik.html">Adab sesama Salik</a>
+    <a href="adab-terhadap-masyarakat.html">Adab terhadap Masyarakat</a>
+  </div>
+
+  <div class="principle-grid">
+    <div class="principle-card"><h4>Dunia di Tangan, Bukan di Hati</h4><p>Boleh memiliki harta, jabatan, dan kesenangan, selama hati tidak terikat dan tidak menjadikannya tujuan akhir.</p></div>
+    <div class="principle-card"><h4>Dunia sebagai Ladang Akhirat</h4><p>Memandang setiap usaha duniawi sebagai sarana ibadah dan bekal menuju kehidupan abadi.</p></div>
+    <div class="principle-card"><h4>Tidak Rakus & Tidak Berlebihan</h4><p>Menjaga kesederhanaan (qana'ah), merasa cukup dengan apa yang telah Allah tetapkan.</p></div>
+    <div class="principle-card"><h4>Bersyukur atas Karunia</h4><p>Menyadari bahwa harta dan kedudukan adalah titipan, bukan hak milik mutlak.</p></div>
+    <div class="principle-card"><h4>Berbagi & Berinfak</h4><p>Menjadikan kelebihan dunia sebagai sarana kebaikan bagi sesama, bukan ditimbun untuk kesombongan.</p></div>
+    <div class="principle-card"><h4>Waspada terhadap Fitnah Dunia</h4><p>Menyadari bahwa gemerlap dunia bisa melalaikan hati dari mengingat Allah bila tidak dikendalikan.</p></div>
+  </div>
+
+  <div class="quote-block">"Zuhud terhadap dunia bukanlah dengan mengharamkan yang halal atau menyia-nyiakan harta, tetapi zuhud adalah engkau lebih yakin dengan apa yang ada di tangan Allah daripada apa yang ada di tanganmu sendiri." — Ibnu Taimiyyah</div>
+
+  <div class="amalan-box">
+    <h4><i class="fa-solid fa-hand-holding-heart"></i> Amalan: Melatih Hati agar Tak Terikat Dunia</h4>
+    <ul>
+      <li>Sedekah rutin setiap hari, sekecil apa pun, sebagai latihan melepas keterikatan pada harta.</li>
+      <li>Muhasabah mingguan: apakah dunia yang kukejar hari ini mendekatkan atau menjauhkan aku dari Allah?</li>
+      <li>Dzikir "Alhamdulillahi 'ala kulli hal" setiap menerima atau kehilangan sesuatu di dunia.</li>
+    </ul>
+  </div>
+
+  <div class="nasihat-box">
+    <div class="label"><i class="fa-solid fa-feather"></i> Nasihat</div>
+    Janganlah engkau membenci dunia, sebab dunia adalah ladang menanam pahala. Namun janganlah pula engkau mencintainya melebihi cintamu kepada Allah, sebab dunia hanyalah persinggahan sementara menuju kampung yang kekal.
+  </div>
+
+  <div class="chapter-pager">
+<a href="adab-kepada-rasul.html" class="pager-btn prev"><i class="fa-solid fa-arrow-left"></i><span><small>Sebelumnya</small>Adab kepada Rasulullah ﷺ</span></a>
+<a href="adab-terhadap-diri.html" class="pager-btn next"><span><small>Selanjutnya</small>Adab terhadap Diri</span><i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    Bagian dari <a href="03-adab-etika.html">Adab &amp; Etika Seorang Salik</a> · <a href="salik-landing-page.html">Kembali ke Beranda SALIK</a>
+  </div>
+</footer>
+
+</body>
+</html>
