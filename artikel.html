@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artikel — SALIK | Pejalan Ruhani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --emerald:#0F6B50; --dark-green:#083D2B; --gold:#D4AF37; --gold-soft:#e8c874;
+    --ivory:#F8F6F1; --ink:#0c2c22; --muted:#5b6b64;
+    --radius:24px; --shadow-card:0 12px 30px -12px rgba(8,61,43,0.15);
+    --max-w:1100px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; color:var(--ink); background:linear-gradient(180deg,#ffffff 0%, #fbfaf6 30%, var(--ivory) 100%);}
+  h1,h2,h3{font-family:'Playfair Display',serif;}
+  a{text-decoration:none; color:inherit;}
+  .container{max-width:var(--max-w); margin:0 auto; padding:0 32px;}
+
+  header{position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.92); backdrop-filter:blur(14px); border-bottom:1px solid #eee6d6; padding:16px 0;}
+  header .container{display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo svg{width:36px; height:36px;}
+  .logo .name{font-family:'Playfair Display',serif; font-weight:700; font-size:18px; color:var(--dark-green);}
+  .back-link{display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--emerald); padding:9px 18px; border:1.5px solid var(--emerald); border-radius:999px; transition:all .25s ease;}
+  .back-link:hover{background:var(--emerald); color:#fff;}
+
+  .page-head{padding:56px 0 20px; text-align:center;}
+  .page-head span.arabic{font-family:'Amiri',serif; font-size:28px; color:var(--gold); display:block; margin-bottom:10px;}
+  .page-head h1{font-size:36px; color:var(--dark-green); margin-bottom:12px;}
+  .page-head p{font-size:14px; color:var(--muted); max-width:600px; margin:0 auto; line-height:1.8;}
+
+  .filters{display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:30px 0 40px;}
+  .filters a{font-size:12.5px; font-weight:600; padding:9px 18px; border-radius:999px; background:#fff; color:var(--dark-green); box-shadow:var(--shadow-card);}
+  .filters a.active{background:var(--emerald); color:#fff;}
+
+  .featured{background:linear-gradient(120deg,#0d3f2e,#0F6B50 60%,#0a2e21); border-radius:var(--radius); color:#fff; padding:36px; margin-bottom:36px; display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center;}
+  .featured .cat{font-size:11px; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold-soft); font-weight:700; margin-bottom:12px;}
+  .featured h2{font-size:24px; margin-bottom:12px;}
+  .featured p{font-size:13px; color:#e2ede7; line-height:1.8; margin-bottom:16px;}
+  .featured .meta{font-size:11.5px; color:#cfe3d8;}
+  .featured .arabic-mark{font-family:'Amiri',serif; font-size:60px; color:var(--gold-soft); text-align:center; opacity:0.85;}
+
+  .article-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:50px;}
+  .article-card{background:#fff; border-radius:18px; padding:24px; box-shadow:var(--shadow-card); transition:transform .3s ease;}
+  .article-card:hover{transform:translateY(-4px);}
+  .article-card .cat{font-size:10.5px; text-transform:uppercase; letter-spacing:1px; color:var(--gold); font-weight:700; margin-bottom:10px;}
+  .article-card h3{font-size:15.5px; color:var(--dark-green); margin-bottom:10px; line-height:1.4;}
+  .article-card p{font-size:12.5px; color:var(--muted); line-height:1.7; margin-bottom:14px;}
+  .article-card .meta{display:flex; justify-content:space-between; align-items:center; font-size:11px; color:var(--muted); border-top:1px solid #f1ece0; padding-top:12px;}
+
+  footer{margin-top:20px; background:var(--dark-green); color:#e6ece7; padding:36px 0; text-align:center; font-size:12.5px;}
+  footer a{color:var(--gold-soft); font-weight:600;}
+
+  @media (max-width:900px){ .article-grid{grid-template-columns:1fr 1fr;} .featured{grid-template-columns:1fr;} }
+  @media (max-width:600px){ .article-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#D4AF37" stroke-width="1.4"/>
+        <path d="M24 4 L41 24 L24 44 L7 24 Z" stroke="#D4AF37" stroke-width="1.2" fill="none"/>
+        <circle cx="24" cy="24" r="5" fill="#D4AF37"/>
+      </svg>
+      <span class="name">SALIK — Pejalan Ruhani</span>
+    </div>
+    <a href="salik-landing-page.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <span class="arabic">اَلْمَقَالَات</span>
+    <h1>Artikel</h1>
+    <p>Kumpulan tulisan seputar ilmu tasawuf, makrifat, dan hikmah kehidupan ruhani untuk menemani perjalananmu sebagai Salik.</p>
+  </div>
+
+  <div class="filters">
+    <a class="active" href="#">Semua</a>
+    <a href="#">Syariat</a>
+    <a href="#">Tarekat</a>
+    <a href="#">Hakikat</a>
+    <a href="#">Makrifat</a>
+    <a href="#">Kisah Wali</a>
+  </div>
+
+  <a href="artikel-insan-kamil-merasa-kecil.html" class="featured" style="cursor:pointer;">
+    <div>
+      <div class="cat">Makrifat · Artikel Pilihan</div>
+      <h2>Mengapa Insan Kamil Selalu Merasa Kecil di Hadapan Allah?</h2>
+      <p>Sebuah renungan tentang paradoks kedekatan spiritual: semakin dekat seorang hamba dengan Allah, semakin ia merasa fakir dan tiada. Artikel ini mengulas tanda-tanda Wushul menurut para arifin.</p>
+      <div class="meta">8 menit baca · Tahapan Perjalanan</div>
+    </div>
+    <div class="arabic-mark">إِنَّا لِلّٰهِ</div>
+  </a>
+
+  <div class="article-grid">
+    <a href="artikel-adab-sebelum-ilmu.html" class="article-card" style="cursor:pointer;">
+      <div class="cat">Syariat</div>
+      <h3>Adab Sebelum Ilmu: Mengapa Ulama Klasik Sangat Menekankannya?</h3>
+      <p>Menelusuri mengapa Imam Malik dan ulama salaf mendahulukan pembelajaran adab selama bertahun-tahun sebelum ilmu.</p>
+      <div class="meta"><span>6 menit</span><span>Adab &amp; Etika</span></div>
+    </a>
+    <a href="artikel-talqin-dzikir-guru.html" class="article-card" style="cursor:pointer;">
+      <div class="cat">Tarekat</div>
+      <h3>Talqin Dzikir: Mengapa Wirid Perlu Diambil dari Guru?</h3>
+      <p>Penjelasan tentang tradisi sanad dzikir dalam tarekat dan pentingnya bimbingan Mursyid dalam Suluk.</p>
+      <div class="meta"><span>5 menit</span><span>Penempuh Jalan Ruhani</span></div>
+    </a>
+    <a href="artikel-hijab-cahaya.html" class="article-card" style="cursor:pointer;">
+      <div class="cat">Hakikat</div>
+      <h3>Hijab Cahaya: Rintangan yang Tak Terlihat oleh Mata Biasa</h3>
+      <p>Karamah dan kelezatan spiritual bisa menjadi hijab paling halus. Bagaimana mengenalinya?</p>
+      <div class="meta"><span>7 menit</span><span>Rintangan Spiritual</span></div>
+    </a>
+    <a href="artikel-kisah-abdul-qadir-jilani.html" class="article-card" style="cursor:pointer;">
+      <div class="cat">Kisah Wali</div>
+      <h3>Kisah Kesabaran Syekh Abdul Qadir al-Jilani di Padang Sahara</h3>
+      <p>Riwayat perjalanan spiritual sang Sultanul Auliya sebelum menjadi guru para pencari Allah.</p>
+      <div class="meta"><span>9 menit</span><span>Tokoh Sufi</span></div>
+    </a>
+    <a href="artikel-kefakiran-adalah-kekayaan.html" class="article-card" style="cursor:pointer;">
+      <div class="cat">Syariat</div>
+      <h3>Kefakiran adalah Kekayaan: Memahami Al-Faqru Fakhri</h3>
+      <p>Ulasan tentang salah satu ungkapan sufi paling terkenal dan maknanya dalam kehidupan sehari-hari.</p>
+      <div class="meta"><span>6 menit</span><span>Maqamat</span></div>
+    </a>
+    <a href="artikel-riyadhoh-pemula.html" class="article-card" style="cursor:pointer;">
+      <div class="cat">Tarekat</div>
+      <h3>Riyadhoh Ringan untuk Pemula: Mulai dari Mana?</h3>
+      <p>Panduan praktis memulai latihan ruhani tanpa harus langsung khalwat panjang.</p>
+      <div class="meta"><span>5 menit</span><span>Riyadhoh</span></div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    Artikel — SALIK · <a href="salik-landing-page.html">Kembali ke Beranda</a>
+  </div>
+</footer>
+
+</body>
+</html>
